@@ -29,11 +29,14 @@ RSpec.describe QuizItemsController, type: :controller do
   # QuizItem. As you add validations to QuizItem, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { question: 'What is your name?',
+    answer: 'Emmanuel Corrales' }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { question: 'What is your name?',
+      answer: '',
+      cheat: 'This should be an invalid param' }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -87,14 +90,15 @@ RSpec.describe QuizItemsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { question: "What is this?",
+          answer: "I don't know!" }
       }
 
       it "updates the requested quiz_item" do
         quiz_item = QuizItem.create! valid_attributes
         put :update, params: {id: quiz_item.to_param, quiz_item: new_attributes}, session: valid_session
         quiz_item.reload
-        skip("Add assertions for updated state")
+        # skip("Add assertions for updated state")
       end
 
       it "renders a JSON response with the quiz_item" do
