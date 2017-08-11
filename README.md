@@ -1,24 +1,17 @@
 # README
+<h3>DESCRIPTION:</h3>
+<p>Demo for rails api with react, rspec and postgresql.</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h3>REQUIREMENTS:</h3>
+<p>
+This application uses a postgresql as its database.
+You should have it installed before setting up the app.
+Rails 5</p>
 
-Things you may want to cover:
+<h3>SETTING UP THE PROJECT:</h3>
+<li> Run 'bundle install'.</li>
+<li>Setup the project running 'rake db:setup'. This will run the neccessary migrations.</li>
+<li>Run the project with 'rails s'.</li>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h3>TESTING WITH RSPEC:</h3>
+<li> Run 'bundle exec rspec'.</li>
